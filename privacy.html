@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Ecolore - Professional Gardening Services</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --leafy-green: #66BB6A;
+            --bloom-coral: #FF7043;
+            --earthy-beige: #EFEFEF;
+            --deep-charcoal: #424242;
+            --sky-blue: #4FC3F7;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--earthy-beige);
+            color: var(--deep-charcoal);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--leafy-green);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: var(--bloom-coral);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--deep-charcoal);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--leafy-green);
+        }
+        
+        /* Policy Content Styles */
+        .policy-header {
+            background-color: var(--leafy-green);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .policy-header h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .policy-header p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .policy-content {
+            background-color: white;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 60px;
+        }
+        
+        .policy-section {
+            margin-bottom: 40px;
+        }
+        
+        .policy-section h2 {
+            color: var(--leafy-green);
+            font-size: 28px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--earthy-beige);
+        }
+        
+        .policy-section h3 {
+            color: var(--bloom-coral);
+            font-size: 22px;
+            margin: 30px 0 15px;
+        }
+        
+        .policy-section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .policy-section ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .policy-section ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .policy-section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+        
+        .policy-section table th {
+            background-color: var(--leafy-green);
+            color: white;
+            text-align: left;
+            padding: 12px;
+        }
+        
+        .policy-section table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--earthy-beige);
+        }
+        
+        .policy-section table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--deep-charcoal);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--leafy-green);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: white;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--leafy-green);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--leafy-green);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #999;
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .policy-header h1 {
+                font-size: 36px;
+            }
+            
+            .policy-content {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 10px;
+            }
+            
+            .policy-content {
+                padding: 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Ecol<span>ore</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Policy Header -->
+    <section class="policy-header">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Last Updated: June 15, 2023</p>
+        </div>
+    </section>
+
+    <!-- Policy Content -->
+    <section class="policy-content">
+        <div class="container">
+            <div class="policy-section">
+                <h2>Introduction</h2>
+                <p>Welcome to Ecolore ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <a href="https://www.ecolore.com">https://www.ecolore.com</a> (the "Site") or use our gardening services (the "Services").</p>
+                <p>Please read this Privacy Policy carefully. By accessing or using our Site or Services, you agree to the terms of this Privacy Policy. If you do not agree with our policies and practices, please do not use our Site or Services.</p>
+                <p>This Privacy Policy may change from time to time. Your continued use of our Site or Services after we make changes is deemed to be acceptance of those changes, so please check the policy periodically for updates.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>Information We Collect</h2>
+                <p>We collect several types of information from and about users of our Site and Services, including:</p>
+                
+                <h3>Personal Information</h3>
+                <p>Personal information is data that can be used to identify or contact a single person. We may collect the following types of personal information:</p>
+                <ul>
+                    <li><strong>Contact Information:</strong> Name, email address, phone number, mailing address, and other similar contact data.</li>
+                    <li><strong>Account Information:</strong> Username, password, and other credentials used to access our Services.</li>
+                    <li><strong>Payment Information:</strong> Credit card numbers, billing addresses, and other payment details when you purchase our Services.</li>
+                    <li><strong>Property Information:</strong> Details about your property, garden size, existing plants, and other relevant information for providing our Services.</li>
+                    <li><strong>Communication Information:</strong> Records and copies of your correspondence if you contact us, including email messages, chat sessions, and phone call recordings (where permitted by law).</li>
+                    <li><strong>Survey Responses:</strong> Information you provide when participating in surveys, contests, or promotional activities.</li>
+                </ul>
+                
+                <h3>Non-Personal Information</h3>
+                <p>We also collect non-personal information that does not directly identify you. This may include:</p>
+                <ul>
+                    <li><strong>Usage Data:</strong> Information about how you interact with our Site and Services, including pages visited, time spent on pages, and other usage statistics.</li>
+                    <li><strong>Device Information:</strong> Data about the device you use to access our Site, including IP address, browser type, operating system, and other technical identifiers.</li>
+                    <li><strong>Location Data:</strong> General geographic location derived from your IP address or more specific location if you enable location services on your device.</li>
+                    <li><strong>Cookies and Tracking Technologies:</strong> Information collected through cookies, web beacons, and other tracking technologies as described in our <a href="cookies.html">Cookie Policy</a>.</li>
+                </ul>
+                
+                <h3>Information from Third Parties</h3>
+                <p>We may receive information about you from other sources, including:</p>
+                <ul>
+                    <li>Social media platforms when you interact with us or share content through these platforms</li>
+                    <li>Service providers that help us verify information or process payments</li>
+                    <li>Publicly available sources and databases</li>
+                    <li>Business partners who offer co-branded services or engage in joint marketing activities</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>How We Use Your Information</h2>
+                <p>We use the information we collect for various purposes, including:</p>
+                
+                <h3>Providing and Improving Our Services</h3>
+                <ul>
+                    <li>To deliver the gardening services you request</li>
+                    <li>To create and manage your account</li>
+                    <li>To process your payments and complete transactions</li>
+                    <li>To communicate with you about your account, services, or inquiries</li>
+                    <li>To personalize your experience and customize our services to your needs</li>
+                    <li>To develop new products, services, and features</li>
+                    <li>To improve the quality, safety, and security of our Site and Services</li>
+                </ul>
+                
+                <h3>Marketing and Communications</h3>
+                <ul>
+                    <li>To send you promotional materials, newsletters, and other communications (where you have consented)</li>
+                    <li>To notify you about special offers, events, or new services that may interest you</li>
+                    <li>To administer contests, sweepstakes, and other promotions</li>
+                    <li>To conduct market research and analyze customer trends</li>
+                </ul>
+                
+                <h3>Business Operations</h3>
+                <ul>
+                    <li>To maintain proper business records and comply with legal obligations</li>
+                    <li>To prevent fraud, abuse, and other illegal activities</li>
+                    <li>To enforce our terms and conditions and protect our rights</li>
+                    <li>To support corporate transactions such as mergers or acquisitions</li>
+                </ul>
+                
+                <h3>Legal Compliance</h3>
+                <ul>
+                    <li>To comply with applicable laws, regulations, and legal processes</li>
+                    <li>To respond to requests from public and government authorities</li>
+                    <li>To protect our rights, privacy, safety, or property, and that of our users or others</li>
+                </ul>
+                
+                <h3>Analytics and Research</h3>
+                <ul>
+                    <li>To understand how users interact with our Site and Services</li>
+                    <li>To analyze usage patterns and improve our offerings</li>
+                    <li>To conduct academic research and industry analysis (using anonymized data)</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>How We Share Your Information</h2>
+                <p>We may share your information in the following circumstances:</p>
+                
+                <h3>Service Providers</h3>
+                <p>We may share your information with third-party service providers who perform services on our behalf, such as:</p>
+                <ul>
+                    <li>Payment processors and billing services</li>
+                    <li>Website hosting and maintenance providers</li>
+                    <li>Marketing and advertising partners</li>
+                    <li>Customer support and communication services</li>
+                    <li>Analytics and data processing companies</li>
+                    <li>Subcontractors involved in delivering gardening services</li>
+                </ul>
+                <p>These service providers are contractually obligated to protect your information and only use it for the purposes we specify.</p>
+                
+                <h3>Business Partners</h3>
+                <p>We may share information with trusted business partners who offer complementary products or services, such as:</p>
+                <ul>
+                    <li>Landscape architects and designers</li>
+                    <li>Plant nurseries and suppliers</li>
+                    <li>Home improvement and outdoor living companies</li>
+                </ul>
+                <p>We will only share your information with these partners when you have given us permission to do so.</p>
+                
+                <h3>Legal Requirements</h3>
+                <p>We may disclose your information if required to do so by law or in the good faith belief that such action is necessary to:</p>
+                <ul>
+                    <li>Comply with legal obligations or respond to subpoenas, court orders, or other legal process</li>
+                    <li>Protect and defend our rights or property</li>
+                    <li>Prevent or investigate possible wrongdoing in connection with our Services</li>
+                    <li>Protect the personal safety of users of our Services or the public</li>
+                    <li>Protect against legal liability</li>
+                </ul>
+                
+                <h3>Business Transfers</h3>
+                <p>In the event of a merger, acquisition, reorganization, bankruptcy, or other sale of all or a portion of our assets, your information may be transferred as part of that transaction. We will notify you via email and/or a prominent notice on our Site of any such change in ownership or control of your personal information.</p>
+                
+                <h3>Aggregated or Anonymized Data</h3>
+                <p>We may share aggregated or anonymized information that does not directly identify you with third parties for industry analysis, demographic profiling, marketing, advertising, and other business purposes.</p>
+                
+                <h3>With Your Consent</h3>
+                <p>We may share your information with third parties when you give us explicit consent to do so.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>Data Security</h2>
+                <p>We implement appropriate technical and organizational measures to protect the security of your personal information. However, please be aware that no method of transmission over the Internet or method of electronic storage is 100% secure.</p>
+                
+                <h3>Our Security Measures</h3>
+                <p>We employ various security measures designed to protect your information, including:</p>
+                <ul>
+                    <li>Encryption of sensitive data in transit and at rest using industry-standard protocols</li>
+                    <li>Secure servers with restricted access and firewalls</li>
+                    <li>Regular security audits and vulnerability testing</li>
+                    <li>Employee training on data protection and privacy best practices</li>
+                    <li>Access controls and authentication mechanisms</li>
+                    <li>Incident response and breach notification procedures</li>
+                </ul>
+                
+                <h3>Your Role in Security</h3>
+                <p>You also play an important role in keeping your information secure:</p>
+                <ul>
+                    <li>Choose strong, unique passwords for your accounts</li>
+                    <li>Do not share your login credentials with others</li>
+                    <li>Be cautious when using public Wi-Fi networks</li>
+                    <li>Keep your devices and software up to date</li>
+                    <li>Log out of your account when using shared devices</li>
+                </ul>
+                
+                <h3>Data Breach Notification</h3>
+                <p>In the unlikely event of a data breach that compromises your personal information, we will notify you and the appropriate authorities as required by applicable law. Our notification will include information about:</p>
+                <ul>
+                    <li>The nature of the breach</li>
+                    <li>The types of information affected</li>
+                    <li>Steps we're taking to address the breach</li>
+                    <li>Measures you can take to protect yourself</li>
+                    <li>Contact information for further inquiries</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>Data Retention</h2>
+                <p>We retain your personal information only for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
+                
+                <h3>Retention Periods</h3>
+                <p>Our retention periods are based on:</p>
+                <ul>
+                    <li>The nature of the information and why it was collected</li>
+                    <li>Legal and regulatory requirements</li>
+                    <li>Business needs and operational requirements</li>
+                    <li>Your ongoing relationship with us</li>
+                </ul>
+                
+                <h3>Typical Retention Periods</h3>
+                <table>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Retention Period</th>
+                    </tr>
+                    <tr>
+                        <td>Account information</td>
+                        <td>3 years after account closure</td>
+                    </tr>
+                    <tr>
+                        <td>Service records</td>
+                        <td>7 years for tax and legal purposes</td>
+                    </tr>
+                    <tr>
+                        <td>Payment information</td>
+                        <td>7 years for financial reporting</td>
+                    </tr>
+                    <tr>
+                        <td>Marketing preferences</td>
+                        <td>2 years after last interaction</td>
+                    </tr>
+                    <tr>
+                        <td>Website analytics</td>
+                        <td>26 months from date of collection</td>
+                    </tr>
+                    <tr>
+                        <td>Customer service records</td>
+                        <td>5 years from date of inquiry</td>
+                    </tr>
+                </table>
+                
+                <h3>Data Disposal</h3>
+                <p>When we no longer need to retain your information, we securely delete or anonymize it using methods designed to prevent recovery or reconstruction of the information.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>Your Privacy Rights</h2>
+                <p>Depending on your location and applicable laws, you may have certain rights regarding your personal information. These may include:</p>
+                
+                <h3>Access and Portability</h3>
+                <p>You have the right to request access to the personal information we hold about you and to receive a copy of that information in a structured, commonly used, and machine-readable format.</p>
+                
+                <h3>Correction</h3>
+                <p>You may request that we correct any inaccurate or incomplete personal information about you.</p>
+                
+                <h3>Deletion</h3>
+                <p>You may request that we delete your personal information, subject to certain exceptions where we are required to retain the information by law or for legitimate business purposes.</p>
+                
+                <h3>Restriction of Processing</h3>
+                <p>You may request that we restrict the processing of your personal information in certain circumstances, such as when you contest the accuracy of the data or object to processing pending verification.</p>
+                
+                <h3>Objection to Processing</h3>
+                <p>You may object to our processing of your personal information for direct marketing purposes or when our processing is based on legitimate interests.</p>
+                
+                <h3>Withdraw Consent</h3>
+                <p>Where we rely on your consent to process personal information, you have the right to withdraw that consent at any time.</p>
+                
+                <h3>Non-Discrimination</h3>
+                <p>We will not discriminate against you for exercising any of your privacy rights.</p>
+                
+                <h3>How to Exercise Your Rights</h3>
+                <p>To exercise any of these rights, please contact us using the information in the "Contact Us" section below. We may need to verify your identity before processing your request, which may require you to provide additional information.</p>
+                <p>We will respond to your request within the time period required by applicable law. If we need more time, we will inform you of the reason and extension period.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>International Data Transfers</h2>
+                <p>Ecolore is based in the United States, and your information is processed and stored on servers located in the U.S. If you are accessing our Site or Services from outside the U.S., please be aware that your information may be transferred to, stored, and processed in the U.S. where our servers are located and our central database is operated.</p>
+                
+                <h3>Data Transfer Mechanisms</h3>
+                <p>When we transfer personal information from the European Economic Area (EEA), United Kingdom, or Switzerland to countries not deemed by the European Commission to provide an adequate level of protection, we implement appropriate safeguards such as:</p>
+                <ul>
+                    <li>Standard contractual clauses approved by the European Commission</li>
+                    <li>Binding corporate rules for intra-group transfers</li>
+                    <li>Other legally approved mechanisms for international data transfers</li>
+                </ul>
+                
+                <h3>Your Rights Under GDPR</h3>
+                <p>If you are located in the EEA, UK, or Switzerland, you have additional rights under the General Data Protection Regulation (GDPR), including:</p>
+                <ul>
+                    <li>The right to lodge a complaint with a supervisory authority</li>
+                    <li>The right to data portability</li>
+                    <li>The right to object to automated decision-making, including profiling</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>Children's Privacy</h2>
+                <p>Our Site and Services are not directed to children under the age of 16. We do not knowingly collect personal information from children under 16. If we become aware that we have collected personal information from a child under 16 without verification of parental consent, we will take steps to remove that information from our servers.</p>
+                <p>If you believe we might have any information from or about a child under 16, please contact us immediately at privacy@ecolore.com.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>Third-Party Links</h2>
+                <p>Our Site may contain links to third-party websites, plug-ins, and applications. Clicking on those links or enabling those connections may allow third parties to collect or share data about you. We do not control these third-party websites and are not responsible for their privacy statements. When you leave our Site, we encourage you to read the privacy policy of every website you visit.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technologies, legal requirements, and other factors. When we do, we will update the "Last Updated" date at the top of this Privacy Policy.</p>
+                <p>If we make material changes to this Privacy Policy that affect how we collect, use, or share your personal information, we will notify you through prominent notice on our Site or by other means such as email prior to the change becoming effective.</p>
+                <p>We encourage you to periodically review this Privacy Policy to stay informed about our information practices and the choices available to you.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or concerns about this Privacy Policy or our privacy practices, please contact us:</p>
+                <p><strong>By email:</strong> privacy@ecolore.com</p>
+                <p><strong>By mail:</strong><br>
+                Ecolore Privacy Officer<br>
+                123 Garden Way<br>
+                Brooklyn, NY 11201<br>
+                United States</p>
+                <p><strong>By phone:</strong> (555) 123-4567</p>
+                <p>We will respond to your inquiry within 30 days of receipt.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Ecolore</h3>
+                    <p>Grow Green. Live Vibrant.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Garden Design</a></li>
+                        <li><a href="#">Landscape Installation</a></li>
+                        <li><a href="#">Garden Maintenance</a></li>
+                        <li><a href="#">Organic Lawn Care</a></li>
+                        <li><a href="#">Irrigation Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Gardening Blog</a></li>
+                        <li><a href="#">Plant Care Guides</a></li>
+                        <li><a href="#">Seasonal Tips</a></li>
+                        <li><a href="#">DIY Projects</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="press.html">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Metrotech Center, Brooklyn, NY 11201, USA</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@ecolore.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9am-6pm</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Ecolore. All Rights Reserved. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="cookies.html">Cookie Policy</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

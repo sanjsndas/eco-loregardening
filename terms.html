@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Ecolore Professional Gardening Services</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --leafy-green: #66BB6A;
+            --bloom-coral: #FF7043;
+            --earthy-beige: #EFEFEF;
+            --deep-charcoal: #424242;
+            --sky-blue: #4FC3F7;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--earthy-beige);
+            color: var(--deep-charcoal);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--leafy-green);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: var(--bloom-coral);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--deep-charcoal);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--leafy-green);
+        }
+        
+        /* Main Content Styles */
+        .terms-content {
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin: 40px 0;
+        }
+        
+        .terms-content h1 {
+            font-size: 36px;
+            color: var(--leafy-green);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .terms-content h2 {
+            font-size: 28px;
+            color: var(--bloom-coral);
+            margin: 40px 0 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .terms-content h3 {
+            font-size: 22px;
+            color: var(--leafy-green);
+            margin: 30px 0 15px;
+        }
+        
+        .terms-content h4 {
+            font-size: 18px;
+            color: var(--deep-charcoal);
+            margin: 25px 0 10px;
+        }
+        
+        .terms-content p {
+            margin-bottom: 20px;
+        }
+        
+        .terms-content ul, .terms-content ol {
+            margin-bottom: 20px;
+            padding-left: 30px;
+        }
+        
+        .terms-content li {
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box {
+            background-color: var(--earthy-beige);
+            border-left: 4px solid var(--leafy-green);
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .highlight-box h4 {
+            color: var(--bloom-coral);
+            margin-top: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--deep-charcoal);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--leafy-green);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: white;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--leafy-green);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--leafy-green);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #999;
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .terms-content {
+                padding: 30px 20px;
+            }
+            
+            .terms-content h1 {
+                font-size: 28px;
+            }
+            
+            .terms-content h2 {
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 10px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Ecol<span>ore</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="terms-content">
+            <h1>Terms of Service</h1>
+            <p><strong>Last Updated:</strong> January 1, 2023</p>
+            
+            <div class="highlight-box">
+                <h4>Important Notice</h4>
+                <p>These Terms of Service ("Terms") govern your use of Ecolore's website and services. By accessing our website or engaging our gardening services, you agree to be bound by these Terms. Please read them carefully before using our services.</p>
+            </div>
+            
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing or using the services provided by Ecolore ("we," "us," or "our"), you agree to be bound by these Terms of Service. If you do not agree to all of these terms and conditions, you must not use our services or website.</p>
+            
+            <h3>1.1 Modifications to Terms</h3>
+            <p>We reserve the right to modify these Terms at any time. All changes will be effective immediately upon posting to our website. Your continued use of our services after changes are posted constitutes your acceptance of the modified Terms.</p>
+            
+            <h3>1.2 Eligibility</h3>
+            <p>Our services are available only to individuals who can form legally binding contracts under applicable law. By using our services, you represent that you are at least 18 years old and have the legal capacity to enter into these Terms.</p>
+            
+            <h2>2. Description of Services</h2>
+            <p>Ecolore provides professional gardening and landscaping services including but not limited to:</p>
+            <ul>
+                <li>Garden design and planning</li>
+                <li>Landscape installation</li>
+                <li>Garden maintenance</li>
+                <li>Organic lawn care</li>
+                <li>Irrigation system design and installation</li>
+                <li>Specialty garden creation (edible gardens, pollinator gardens, etc.)</li>
+                <li>Seasonal garden services</li>
+            </ul>
+            
+            <h3>2.1 Service Area</h3>
+            <p>Our services are currently available within specified areas of New York City. Service availability may be limited in certain locations or for certain types of properties. We reserve the right to refuse service to any location outside our designated service area.</p>
+            
+            <h3>2.2 Service Limitations</h3>
+            <p>Certain services may be subject to seasonal availability, weather conditions, and other factors beyond our control. We will make reasonable efforts to inform you of any limitations that may affect your requested services.</p>
+            
+            <h2>3. Client Responsibilities</h2>
+            <p>As a client of Ecolore, you agree to the following responsibilities:</p>
+            
+            <h3>3.1 Property Access</h3>
+            <p>You agree to provide our team with safe and unobstructed access to the areas where services are to be performed. This includes ensuring gates are unlocked, pets are secured, and any hazards are identified prior to our arrival.</p>
+            
+            <h3>3.2 Property Preparation</h3>
+            <p>For certain services, you may be required to prepare your property prior to our arrival. This may include moving vehicles, clearing work areas, or securing delicate items. We will provide specific preparation instructions when applicable.</p>
+            
+            <h3>3.3 Utilities</h3>
+            <p>You are responsible for identifying the location of all underground utilities (water, gas, electric, etc.) prior to any digging or excavation work. Ecolore will not be responsible for damage to unmarked utilities.</p>
+            
+            <h3>3.4 Maintenance of Completed Work</h3>
+            <p>For certain services, proper maintenance may be required to ensure the longevity and health of your garden. You agree to follow all maintenance instructions provided by our team. Failure to properly maintain your garden may void any applicable warranties.</p>
+            
+            <h2>4. Pricing and Payments</h2>
+            
+            <h3>4.1 Estimates</h3>
+            <p>All estimates provided by Ecolore are valid for 30 days from the date of issue. Estimates are based on our initial assessment and may be subject to change if actual conditions differ from those initially observed.</p>
+            
+            <h3>4.2 Pricing Structure</h3>
+            <p>Our pricing may be structured as:</p>
+            <ul>
+                <li><strong>Fixed Price:</strong> A set price for defined scope of work</li>
+                <li><strong>Time and Materials:</strong> Based on actual time spent and materials used</li>
+                <li><strong>Recurring Services:</strong> Regular maintenance services billed at agreed intervals</li>
+            </ul>
+            <p>The pricing structure for your specific services will be outlined in your service agreement.</p>
+            
+            <h3>4.3 Payment Terms</h3>
+            <p>Payment terms are as follows unless otherwise agreed in writing:</p>
+            <ul>
+                <li>For projects under $1,000: Full payment due upon completion</li>
+                <li>For projects $1,000-$5,000: 50% deposit due before work begins, balance due upon completion</li>
+                <li>For projects over $5,000: Custom payment schedule will be provided</li>
+                <li>Recurring services: Billed monthly in advance</li>
+            </ul>
+            
+            <h3>4.4 Accepted Payment Methods</h3>
+            <p>We accept the following payment methods:</p>
+            <ul>
+                <li>Cash</li>
+                <li>Check</li>
+                <li>Credit/Debit Cards (Visa, MasterCard, American Express, Discover)</li>
+                <li>Bank Transfers</li>
+            </ul>
+            
+            <h3>4.5 Late Payments</h3>
+            <p>Payments not received within 15 days of the due date will be subject to a late fee of 1.5% per month (18% APR) on the outstanding balance. Accounts more than 30 days past due may result in suspension of services.</p>
+            
+            <h2>5. Cancellation and Rescheduling</h2>
+            
+            <h3>5.1 Client Cancellations</h3>
+            <p>For scheduled services, the following cancellation policies apply:</p>
+            <ul>
+                <li><strong>More than 48 hours notice:</strong> No cancellation fee</li>
+                <li><strong>24-48 hours notice:</strong> 25% of service fee</li>
+                <li><strong>Less than 24 hours notice:</strong> 50% of service fee</li>
+                <li><strong>No-show:</strong> 100% of service fee</li>
+            </ul>
+            
+            <h3>5.2 Ecolore Cancellations</h3>
+            <p>We reserve the right to cancel or reschedule services due to:</p>
+            <ul>
+                <li>Inclement weather</li>
+                <li>Equipment failure</li>
+                <li>Staffing issues</li>
+                <li>Safety concerns</li>
+            </ul>
+            <p>We will make every effort to provide as much notice as possible and reschedule at your earliest convenience.</p>
+            
+            <h3>5.3 Project Cancellations</h3>
+            <p>For ongoing projects cancelled by the client:</p>
+            <ul>
+                <li>Deposits are non-refundable</li>
+                <li>Client is responsible for payment of all work completed and materials purchased up to the cancellation date</li>
+                <li>Any materials already purchased but not installed may be provided to the client or refunded at our discretion</li>
+            </ul>
+            
+            <h2>6. Warranties and Guarantees</h2>
+            
+            <h3>6.1 Plant Guarantee</h3>
+            <p>We guarantee all installed plants for 90 days from the date of installation, provided that:</p>
+            <ul>
+                <li>The plant has received proper care as outlined in our care instructions</li>
+                <li>The plant has not been damaged by factors beyond our control (extreme weather, pests, animals, etc.)</li>
+                <li>The plant was not moved from its original installed location</li>
+            </ul>
+            <p>If a plant fails within the guarantee period, we will replace it once at no additional cost.</p>
+            
+            <h3>6.2 Workmanship Warranty</h3>
+            <p>We warrant all workmanship for a period of one year from the date of completion. This warranty covers defects in installation and construction of hardscape elements. The warranty does not cover:</p>
+            <ul>
+                <li>Damage caused by improper maintenance</li>
+                <li>Damage caused by acts of nature</li>
+                <li>Damage caused by third parties</li>
+                <li>Normal wear and tear</li>
+            </ul>
+            
+            <h3>6.3 Irrigation System Warranty</h3>
+            <p>We warrant irrigation system components as follows:</p>
+            <ul>
+                <li>Controllers: 1 year</li>
+                <li>Valves and sprinkler heads: 1 year</li>
+                <li>PVC piping: 2 years</li>
+                <li>Polyethylene tubing: 1 year</li>
+            </ul>
+            <p>Warranty does not cover damage caused by freezing, improper winterization, or physical damage from lawn equipment or other external forces.</p>
+            
+            <h3>6.4 Limitation of Warranties</h3>
+            <p>THE WARRANTIES SET FORTH ABOVE ARE IN LIEU OF ALL OTHER WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. SOME STATES DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY LASTS, SO THE ABOVE LIMITATION MAY NOT APPLY TO YOU.</p>
+            
+            <h2>7. Limitation of Liability</h2>
+            
+            <h3>7.1 General Limitation</h3>
+            <p>IN NO EVENT SHALL ECOLORE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM (i) YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE SERVICES; (ii) ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SERVICES; (iii) ANY CONTENT OBTAINED FROM THE SERVICES; OR (iv) UNAUTHORIZED ACCESS, USE OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT, WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE) OR ANY OTHER LEGAL THEORY, WHETHER OR NOT WE HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGE, AND EVEN IF A REMEDY SET FORTH HEREIN IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE.</p>
+            
+            <h3>7.2 Cap on Liability</h3>
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, OUR TOTAL LIABILITY FOR ANY CLAIMS UNDER THESE TERMS, INCLUDING FOR ANY IMPLIED WARRANTIES, IS LIMITED TO THE AMOUNT YOU PAID US TO USE THE SERVICES (OR, IF WE CHOOSE, TO SUPPLYING YOU THE SERVICES AGAIN).</p>
+            
+            <h3>7.3 Force Majeure</h3>
+            <p>Ecolore shall not be liable for any failure or delay in performance due to any cause beyond our reasonable control, including acts of God, war, riot, embargoes, acts of civil or military authorities, fire, floods, accidents, strikes, or shortages of transportation, facilities, fuel, energy, labor or materials.</p>
+            
+            <h2>8. Intellectual Property</h2>
+            
+            <h3>8.1 Ownership</h3>
+            <p>All content included on our website and in our service materials, including text, graphics, logos, images, designs, and software, is the property of Ecolore or its content suppliers and protected by copyright and other laws that protect intellectual property.</p>
+            
+            <h3>8.2 Garden Designs</h3>
+            <p>All garden designs created by Ecolore remain our intellectual property. We grant you a non-exclusive, non-transferable license to use the design for your property only. You may not reproduce, distribute, or use the design for other properties without our written permission.</p>
+            
+            <h3>8.3 Client Photos</h3>
+            <p>By engaging our services, you grant Ecolore permission to use photographs of your property for our portfolio, marketing materials, and website. If you prefer we not use photos of your property, you must notify us in writing before work begins.</p>
+            
+            <h2>9. Dispute Resolution</h2>
+            
+            <h3>9.1 Informal Resolution</h3>
+            <p>Before filing a claim against Ecolore, you agree to try to resolve the dispute informally by contacting us at info@ecolore.com. We'll try to resolve the dispute informally by contacting you via email. If a dispute is not resolved within 30 days of submission, either party may bring a formal proceeding.</p>
+            
+            <h3>9.2 Arbitration</h3>
+            <p>Any disputes arising out of or relating to these Terms or the services provided shall be resolved by binding arbitration in New York County, New York, rather than in court. The arbitration shall be conducted by the American Arbitration Association (AAA) under its Commercial Arbitration Rules. Judgment on the award rendered by the arbitrator may be entered in any court having jurisdiction thereof.</p>
+            
+            <h3>9.3 Class Action Waiver</h3>
+            <p>You may only resolve disputes with us on an individual basis, and may not bring a claim as a plaintiff or a class member in a class, consolidated, or representative action. Class arbitrations, class actions, private attorney general actions, and consolidation with other arbitrations aren't allowed.</p>
+            
+            <h3>9.4 Governing Law</h3>
+            <p>These Terms shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of law provisions.</p>
+            
+            <h2>10. General Provisions</h2>
+            
+            <h3>10.1 Entire Agreement</h3>
+            <p>These Terms constitute the entire agreement between you and Ecolore regarding our services and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding such services.</p>
+            
+            <h3>10.2 Severability</h3>
+            <p>If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions will remain in full force and effect.</p>
+            
+            <h3>10.3 Waiver</h3>
+            <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
+            
+            <h3>10.4 Assignment</h3>
+            <p>You may not assign or transfer these Terms, by operation of law or otherwise, without our prior written consent. Any attempt by you to assign or transfer these Terms without such consent will be null and void. Ecolore may freely assign or transfer these Terms without restriction.</p>
+            
+            <h3>10.5 Notices</h3>
+            <p>Any notices or other communications provided by Ecolore under these Terms, including those regarding modifications to these Terms, will be given by posting to our website or via email. For notices made by email, the date of receipt will be deemed the date on which such notice is transmitted.</p>
+            
+            <h3>10.6 Survival</h3>
+            <p>All provisions of these Terms which by their nature should survive termination shall survive termination, including without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
+            
+            <h2>11. Contact Information</h2>
+            <p>If you have any questions about these Terms of Service, please contact us at:</p>
+            <p><strong>Ecolore Gardening Services</strong><br>
+            123 Greenway Blvd<br>
+            Brooklyn, NY 11201<br>
+            Phone: (555) 123-4567<br>
+            Email: legal@ecolore.com</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Ecolore</h3>
+                    <p>Grow Green. Live Vibrant.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Garden Design</a></li>
+                        <li><a href="#">Landscape Installation</a></li>
+                        <li><a href="#">Garden Maintenance</a></li>
+                        <li><a href="#">Organic Lawn Care</a></li>
+                        <li><a href="#">Irrigation Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Gardening Blog</a></li>
+                        <li><a href="#">Plant Care Guides</a></li>
+                        <li><a href="#">Seasonal Tips</a></li>
+                        <li><a href="#">DIY Projects</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="press.html">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Metrotech Center, Brooklyn, NY 11201, USA</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@ecolore.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9am-6pm</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Ecolore. All Rights Reserved. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="cookies.html">Cookie Policy</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

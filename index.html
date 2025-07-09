@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecolore - Professional Gardening Services | Grow Green. Live Vibrant.</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --leafy-green: #66BB6A;
+            --bloom-coral: #FF7043;
+            --earthy-beige: #EFEFEF;
+            --deep-charcoal: #424242;
+            --sky-blue: #4FC3F7;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--earthy-beige);
+            color: var(--deep-charcoal);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--leafy-green);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: var(--bloom-coral);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--deep-charcoal);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--leafy-green);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('p1.webp') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--bloom-coral);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #e55c33;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--leafy-green);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--deep-charcoal);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--deep-charcoal);
+        }
+        
+        .service-content p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 36px;
+            color: var(--leafy-green);
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+        
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--earthy-beige);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            font-style: normal;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Gardening Services Details */
+        .service-details {
+            padding: 80px 0;
+        }
+        
+        .service-details-content {
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .service-details-content h2 {
+            font-size: 32px;
+            color: var(--leafy-green);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .service-details-content h3 {
+            font-size: 24px;
+            color: var(--bloom-coral);
+            margin: 30px 0 15px;
+        }
+        
+        .service-details-content p {
+            margin-bottom: 20px;
+        }
+        
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature-card {
+            background-color: var(--earthy-beige);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .feature-card i {
+            font-size: 40px;
+            color: var(--leafy-green);
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-overlay i {
+            color: white;
+            font-size: 30px;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn-light {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-light:hover {
+            background-color: white;
+            color: var(--deep-charcoal);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--deep-charcoal);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--leafy-green);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: white;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--leafy-green);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--leafy-green);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #999;
+            font-size: 14px;
+        }
+        
+        /* Disclaimer Section */
+        .disclaimer {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .disclaimer-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .disclaimer-content h2 {
+            font-size: 28px;
+            color: var(--bloom-coral);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .disclaimer-content h3 {
+            font-size: 20px;
+            color: var(--leafy-green);
+            margin: 25px 0 15px;
+        }
+        
+        /* Customer Satisfaction Section */
+        .satisfaction {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .satisfaction-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .satisfaction-content h2 {
+            font-size: 32px;
+            color: var(--leafy-green);
+            margin-bottom: 20px;
+        }
+        
+        .satisfaction-content p {
+            margin-bottom: 30px;
+        }
+        
+        .satisfaction-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--bloom-coral);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 18px;
+            color: var(--deep-charcoal);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-img {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 10px;
+            }
+            
+            .service-details-content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Ecol<span>ore</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Professional Gardening Services</h1>
+            <p>Transform your space with our expert gardening solutions tailored to your needs</p>
+            <a href="#services" class="btn">Explore Services</a>
+        </div>
+    </section>
+     <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Why Choose Our Gardening Services?</h2>
+                    <p>At Ecolore, we combine horticultural expertise with artistic vision to create gardens that are both beautiful and sustainable. Our team of certified professionals has transformed hundreds of urban spaces across New York into thriving green oases.</p>
+                    <p>We specialize in creating gardens that are not only visually stunning but also ecologically responsible. From native plant selection to water-wise irrigation systems, every aspect of our service is designed with sustainability in mind.</p>
+                    <p>Our approach is collaborative - we work closely with you to understand your vision, lifestyle, and the unique characteristics of your space to create a garden that you'll love for years to come.</p>
+                    <a href="#" class="btn">Meet Our Team</a>
+                </div>
+                <div class="about-img">
+                    <img src="p2.webp" alt="Gardening Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Gardening Services</h2>
+                <p>From small balcony gardens to expansive backyard landscapes, our team of experts will bring your green dreams to life with sustainable, beautiful solutions.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="p3.avif" alt="Garden Design">
+                    </div>
+                    <div class="service-content">
+                        <h3>Custom Garden Design</h3>
+                        <p>Our expert designers create personalized garden plans that match your space, style, and maintenance preferences.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="p4.webp" alt="Landscape Installation">
+                    </div>
+                    <div class="service-content">
+                        <h3>Landscape Installation</h3>
+                        <p>Professional installation of all garden elements including patios, walkways, water features, and planting beds.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="p5.avif" alt="Maintenance">
+                    </div>
+                    <div class="service-content">
+                        <h3>Regular Maintenance</h3>
+                        <p>Keep your garden looking its best with our comprehensive maintenance programs tailored to your specific needs.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Work</h2>
+                <p>Browse examples of our completed gardening projects across New York City.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="p6.avif" alt="Garden Project 1">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="p7.avif" alt="Garden Project 2">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="p8.avif" alt="Garden Project 3">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="p9.avif" alt="Garden Project 4">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Gardening Services Details -->
+    <section class="service-details">
+        <div class="container">
+            <div class="service-details-content">
+                <h2>Comprehensive Gardening Services</h2>
+                
+                <h3>Garden Design & Planning</h3>
+                <p>Our garden design service begins with a thorough consultation to understand your vision, preferences, and the unique characteristics of your space. We consider factors like sunlight exposure, soil conditions, climate, and your desired level of maintenance to create a customized garden plan. Our designs incorporate both aesthetic and functional elements, creating outdoor spaces that are beautiful, practical, and sustainable.</p>
+                <p>We specialize in various garden styles including modern minimalist, cottage garden, Mediterranean, Japanese Zen, and native wildlife gardens. Our design process includes detailed sketches, plant selection, hardscape planning, and a phased implementation plan that works with your budget and timeline.</p>
+                
+                <h3>Plant Selection & Installation</h3>
+                <p>Choosing the right plants is crucial for a thriving garden. Our horticultural experts select plants based on your local climate, soil conditions, sunlight availability, and maintenance preferences. We prioritize native and pollinator-friendly plants that support local ecosystems while also incorporating exotic species where appropriate.</p>
+                <p>Our installation process goes beyond simply putting plants in the ground. We prepare the soil with organic amendments, ensure proper spacing for mature growth, and implement water-efficient irrigation systems. For edible gardens, we use organic practices and companion planting techniques to promote healthy growth without harmful chemicals.</p>
+                
+                <h3>Hardscaping & Garden Structures</h3>
+                <p>Hardscaping elements provide structure and functionality to your garden. We design and install patios, walkways, retaining walls, decks, and other structural features using sustainable materials like reclaimed wood, natural stone, and permeable pavers. Our team can also build garden structures such as pergolas, trellises, raised beds, and greenhouses.</p>
+                <p>We specialize in creating outdoor living spaces that extend your home's functionality. From cozy fire pits to elegant water features, we design hardscape elements that complement your garden's aesthetic while serving practical purposes.</p>
+                
+                <div class="service-features">
+                    <div class="feature-card">
+                        <i class="fas fa-leaf"></i>
+                        <h4>Eco-Friendly Practices</h4>
+                        <p>We use organic methods, conserve water, and promote biodiversity in all our projects.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h4>Detailed Planning</h4>
+                        <p>Comprehensive designs that consider all aspects of your space and needs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-seedling"></i>
+                        <h4>Quality Plants</h4>
+                        <p>We source healthy, vibrant plants from reputable local nurseries.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Seasonal Care</h4>
+                        <p>Year-round maintenance plans to keep your garden thriving in every season.</p>
+                    </div>
+                </div>
+                
+                <h3>Irrigation & Water Management</h3>
+                <p>Efficient water use is at the heart of our gardening philosophy. We design and install smart irrigation systems that deliver the right amount of water exactly where it's needed. Our systems include rain sensors, moisture meters, and programmable controllers to prevent water waste.</p>
+                <p>For clients interested in sustainable water solutions, we specialize in rainwater harvesting systems, greywater recycling, and drought-tolerant landscaping. We can also retrofit existing irrigation systems to make them more efficient and environmentally friendly.</p>
+                
+                <h3>Organic Lawn Care</h3>
+                <p>Transform your lawn into a healthy, chemical-free green space with our organic lawn care program. We use natural fertilizers, compost teas, and biological pest control to nurture your grass without synthetic chemicals. Our approach focuses on building healthy soil ecosystems that support lush turf naturally.</p>
+                <p>For clients interested in reducing their lawn area, we offer lawn conversion services, replacing grass with native groundcovers, flowering meadows, or low-maintenance ornamental grasses that require less water and care.</p>
+                
+                <h3>Seasonal Garden Maintenance</h3>
+                <p>Keep your garden looking its best year-round with our comprehensive maintenance services. Our seasonal programs include pruning, fertilizing, mulching, pest management, and bed cleanup tailored to each plant's needs and the changing seasons.</p>
+                <p>We offer flexible maintenance schedules from weekly visits to seasonal tune-ups, all performed by knowledgeable gardeners who understand the specific needs of your plants. Our maintenance services also include soil testing, amendment applications, and ongoing plant health monitoring.</p>
+                
+                <h3>Specialty Gardens</h3>
+                <p>Create a unique garden space tailored to your specific interests with our specialty garden services:</p>
+                <ul>
+                    <li><strong>Edible Gardens:</strong> Beautiful and productive vegetable gardens, fruit trees, and herb spirals designed for maximum yield in limited spaces.</li>
+                    <li><strong>Pollinator Gardens:</strong> Plantings specifically designed to attract and support bees, butterflies, and other beneficial pollinators.</li>
+                    <li><strong>Medicinal Herb Gardens:</strong> Curated collections of healing plants with information on their traditional uses.</li>
+                    <li><strong>Japanese Zen Gardens:</strong> Serene spaces featuring carefully placed rocks, raked gravel, and minimalist plantings.</li>
+                    <li><strong>Vertical Gardens:</strong> Space-saving green walls and container systems for small urban spaces.</li>
+                    <li><strong>Cutting Gardens:</strong> Flower gardens designed specifically for providing beautiful blooms for indoor arrangements.</li>
+                </ul>
+                
+                <h3>Garden Lighting</h3>
+                <p>Extend the enjoyment of your garden into the evening hours with our professional landscape lighting services. We design lighting schemes that highlight your garden's best features while providing safety and security. Our energy-efficient LED systems create magical nighttime atmospheres while minimizing energy consumption.</p>
+                <p>Lighting options include path lights, uplighting for trees and architectural features, subtle deck and step lighting, and dramatic focal point lighting. We can also install smart lighting systems that you can control from your phone or program to change with the seasons.</p>
+                
+                <h3>Garden Renovation & Restoration</h3>
+                <p>Breathe new life into an overgrown or outdated garden with our renovation services. We carefully assess existing plants and structures, preserving what's healthy and valuable while removing or replacing elements that no longer serve the space. Our restoration process respects the garden's history while introducing modern, sustainable practices.</p>
+                <p>For historic properties, we offer period-appropriate garden restoration services, researching original designs and using heirloom plant varieties to recreate gardens true to their era.</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+   
+
+    <!-- Customer Satisfaction Section -->
+    <section class="satisfaction">
+        <div class="container">
+            <div class="satisfaction-content">
+                <h2>Our Commitment to Customer Satisfaction</h2>
+                <p>At Ecolore, your satisfaction is our top priority. We stand behind our work with comprehensive guarantees and a customer-first approach to every project.</p>
+                <p>Our satisfaction promise includes a 90-day guarantee on all installed plants, a one-year warranty on hardscape installations, and free follow-up visits to ensure your garden is thriving. If you're not completely happy with any aspect of our service, we'll make it right.</p>
+                
+                <div class="satisfaction-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Customer Satisfaction Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">Years of Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Guaranteed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer Section -->
+    <section class="disclaimer">
+        <div class="container">
+            <div class="disclaimer-content">
+                <h2>Disclaimer</h2>
+                
+                <h3>General Information</h3>
+                <p>The information contained on this website is for general information purposes only. While we endeavor to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.</p>
+                
+                <h3>Professional Advice</h3>
+                <p>The content provided on this gardening services website is not intended to be a substitute for professional gardening advice, diagnosis, or treatment. Always seek the advice of qualified gardening professionals with any questions you may have regarding garden design, plant selection, or maintenance. Never disregard professional advice or delay in seeking it because of something you have read on this website.</p>
+                
+                <h3>Service Limitations</h3>
+                <p>Our gardening services may be subject to limitations based on seasonality, weather conditions, local regulations, and the specific characteristics of your property. While we strive to provide accurate estimates and timelines, actual services may vary based on these factors. We reserve the right to modify or discontinue services at any time without notice.</p>
+                
+                <h3>Plant Performance</h3>
+                <p>Ecolore cannot guarantee the performance of any specific plant in your garden as growth and health are dependent on numerous factors beyond our control including weather, soil conditions, pest pressures, and maintenance practices. Our plant health guarantees are limited to replacement of plants that fail within the specified warranty period when proper care instructions have been followed.</p>
+                
+                <h3>Third-Party Links</h3>
+                <p>Through this website you are able to link to other websites which are not under the control of Ecolore. We have no control over the nature, content and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.</p>
+                
+                <h3>Website Content</h3>
+                <p>All content on this website including text, graphics, images, and other material is for informational purposes only and is protected by copyright laws. Unauthorized use and/or duplication of this material without express and written permission from Ecolore is strictly prohibited.</p>
+                
+                <h3>Limitation of Liability</h3>
+                <p>In no event will Ecolore be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website or our services.</p>
+                
+                <h3>Service Area</h3>
+                <p>Our gardening services are currently available within specified areas of New York City. Service availability may be limited in certain locations or for certain types of properties. Contact us directly to confirm whether we service your specific address.</p>
+                
+                <h3>Pricing Information</h3>
+                <p>All pricing information provided on this website is for estimation purposes only. Actual service costs may vary based on the specific requirements of your project. We provide firm quotes after conducting an on-site assessment of your property.</p>
+                
+                <h3>Changes to Disclaimer</h3>
+                <p>Ecolore reserves the right to modify these disclaimers at any time. Your continued use of the website following any changes constitutes your acceptance of the new terms.</p>
+                
+                <h3>Contact Information</h3>
+                <p>If you have any questions about this disclaimer, please contact us at info@ecolore.com or call (555) 123-4567.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Space?</h2>
+            <p>Schedule a consultation with our gardening experts today and take the first step toward your dream garden.</p>
+            <a href="contact.html" class="btn btn-light">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Ecolore</h3>
+                    <p>Grow Green. Live Vibrant.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Garden Design</a></li>
+                        <li><a href="#">Landscape Installation</a></li>
+                        <li><a href="#">Garden Maintenance</a></li>
+                        <li><a href="#">Organic Lawn Care</a></li>
+                        <li><a href="#">Irrigation Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Gardening Blog</a></li>
+                        <li><a href="#">Plant Care Guides</a></li>
+                        <li><a href="#">Seasonal Tips</a></li>
+                        <li><a href="#">DIY Projects</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="press.html">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Metrotech Center, Brooklyn, NY 11201, USA</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@ecolore.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9am-6pm</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Ecolore. All Rights Reserved. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="cookies.html">Cookie Policy</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

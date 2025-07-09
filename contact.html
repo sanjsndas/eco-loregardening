@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Ecolore - Professional Gardening Services | Grow Green. Live Vibrant.</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --leafy-green: #66BB6A;
+            --bloom-coral: #FF7043;
+            --earthy-beige: #EFEFEF;
+            --deep-charcoal: #424242;
+            --sky-blue: #4FC3F7;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--earthy-beige);
+            color: var(--deep-charcoal);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--leafy-green);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: var(--bloom-coral);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--deep-charcoal);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--leafy-green);
+        }
+        
+        /* Hero Section */
+        .contact-hero {
+            background: linear-gradient( rgba(56, 255, 1, 0.755), rgba(56, 255, 1, 0.755));                                                                             
+            height: 400px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .contact-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--bloom-coral);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #e55c33;
+        }
+        
+        /* Contact Main Section */
+        .contact-main {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--leafy-green);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--deep-charcoal);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--leafy-green);
+            outline: none;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: var(--leafy-green);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #57a05a;
+        }
+        
+        .contact-info {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            color: var(--leafy-green);
+            margin-bottom: 25px;
+        }
+        
+        .contact-details {
+            margin-bottom: 40px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            font-size: 20px;
+            color: var(--leafy-green);
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+        
+        .contact-text h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .contact-text p,
+        .contact-text a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-text a:hover {
+            color: var(--leafy-green);
+        }
+        
+        .business-hours {
+            margin-bottom: 40px;
+        }
+        
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .hours-table tr {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .hours-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .hours-table td {
+            padding: 12px 0;
+        }
+        
+        .hours-table td:first-child {
+            font-weight: 500;
+        }
+        
+        .hours-table td:last-child {
+            text-align: right;
+        }
+        
+        .social-contact {
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--earthy-beige);
+            border-radius: 50%;
+            color: var(--deep-charcoal);
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--leafy-green);
+            color: white;
+        }
+        
+        /* Service Areas Section */
+        .service-areas {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .area-card {
+            background-color: var(--earthy-beige);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .area-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .area-card i {
+            font-size: 40px;
+            color: var(--leafy-green);
+            margin-bottom: 15px;
+        }
+        
+        .area-card h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        /* FAQ Section */
+        .contact-faq {
+            padding: 60px 0;
+            background-color: var(--earthy-beige);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background-color: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--deep-charcoal);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+        }
+        
+        .faq-item.active .faq-question {
+            background-color: #f9f9f9;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 20px 20px;
+        }
+        
+        /* Map Section */
+        .contact-map {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .map-container {
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Team Section */
+        .contact-team {
+            padding: 60px 0;
+            background-color: var(--earthy-beige);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .team-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .team-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .team-card:hover .team-img img {
+            transform: scale(1.05);
+        }
+        
+        .team-info {
+            padding: 25px;
+        }
+        
+        .team-info h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+            color: var(--deep-charcoal);
+        }
+        
+        .team-info p {
+            color: var(--bloom-coral);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .team-info .social-links {
+            justify-content: center;
+        }
+        
+        /* Testimonials */
+        .contact-testimonials {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--earthy-beige);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            font-style: normal;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* CTA Section */
+        .contact-cta {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn-light {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-light:hover {
+            background-color: white;
+            color: var(--deep-charcoal);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--deep-charcoal);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--leafy-green);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: white;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--leafy-green);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--leafy-green);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #999;
+            font-size: 14px;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .contact-hero h1 {
+                font-size: 36px;
+            }
+            
+            .contact-hero p {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 10px;
+            }
+            
+            .contact-form,
+            .contact-info {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Ecol<span>ore</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Contact Our Gardening Experts</h1>
+            <p>Ready to transform your outdoor space? Get in touch with our team for a free consultation and quote.</p>
+            <a href="#contact-form" class="btn">Get Your Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Contact Main Section -->
+    <section class="contact-main">
+        <div class="container">
+            <div class="section-title">
+                <h2>How Can We Help You?</h2>
+                <p>Whether you have questions about our services, want to schedule a consultation, or need advice on your garden project, our team is here to assist you.</p>
+            </div>
+            
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form" id="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name*</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="design">Garden Design</option>
+                                <option value="installation">Landscape Installation</option>
+                                <option value="maintenance">Garden Maintenance</option>
+                                <option value="lawn-care">Organic Lawn Care</option>
+                                <option value="irrigation">Irrigation Systems</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message*</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="newsletter" checked> 
+                                Subscribe to our gardening tips newsletter
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Our Office</h4>
+                                <p>Metrotech Center, Brooklyn, NY 11201, USA</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Call Us</h4>
+                                <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+                                <p>After Hours Emergency: <a href="tel:+15551234568">(555) 123-4568</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email Us</h4>
+                                <p><a href="mailto:info@ecolore.com">info@ecolore.com</a></p>
+                                <p><a href="mailto:support@ecolore.com">support@ecolore.com</a> (Customer Support)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="business-hours">
+                        <h4>Business Hours</h4>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Monday - Friday</td>
+                                <td>9:00 AM - 6:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>10:00 AM - 4:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>Closed</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="social-contact">
+                        <h4>Connect With Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="emergency-notice">
+                        <p><strong>For urgent gardening emergencies</strong> (such as storm damage or hazardous tree situations), please call our emergency line at <a href="tel:+15551234568">(555) 123-4568</a>, available 24/7.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas Section -->
+    <section class="service-areas">
+        <div class="container">
+            <div class="section-title">
+                <h2>Areas We Serve</h2>
+                <p>Ecolore provides professional gardening services throughout the New York metropolitan area and surrounding regions.</p>
+            </div>
+            
+            <div class="areas-grid">
+                <div class="area-card">
+                    <i class="fas fa-city"></i>
+                    <h4>Manhattan</h4>
+                    <p>All neighborhoods including Upper East Side, Chelsea, and Financial District</p>
+                </div>
+                
+                <div class="area-card">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <h4>Brooklyn</h4>
+                    <p>From Park Slope to Williamsburg and all areas in between</p>
+                </div>
+                
+                <div class="area-card">
+                    <i class="fas fa-tree"></i>
+                    <h4>Queens</h4>
+                    <p>Serving Astoria, Long Island City, Forest Hills and more</p>
+                </div>
+                
+                <div class="area-card">
+                    <i class="fas fa-home"></i>
+                    <h4>Bronx</h4>
+                    <p>Riverdale, Pelham Bay, and surrounding communities</p>
+                </div>
+                
+                <div class="area-card">
+                    <i class="fas fa-subway"></i>
+                    <h4>Staten Island</h4>
+                    <p>Full-service gardening across the borough</p>
+                </div>
+                
+                <div class="area-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h4>Westchester</h4>
+                    <p>Select towns in Westchester County</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 40px;">Don't see your neighborhood listed? <a href="#contact-form">Contact us</a> to check if we service your area. We're continually expanding our service zones to bring professional gardening to more communities.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about contacting Ecolore and our gardening services.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How quickly can I expect a response after submitting the contact form?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We pride ourselves on prompt communication. You'll receive an automated confirmation immediately after form submission, and one of our gardening consultants will respond to your inquiry within 24 hours during our normal business hours (Monday-Friday, 9am-6pm). For inquiries submitted on weekends or holidays, we'll respond by the next business day.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What information should I include in my message to get the best response?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To help us provide the most accurate and helpful response, please include:</p>
+                        <ul>
+                            <li>The type of service you're interested in (design, maintenance, installation, etc.)</li>
+                            <li>Your property type (residential, commercial, size of space)</li>
+                            <li>Any specific challenges or goals for your garden</li>
+                            <li>Your preferred timeline for the project</li>
+                            <li>Photos of your current space (if possible)</li>
+                        </ul>
+                        <p>The more details you provide, the better we can tailor our response to your needs.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you charge for initial consultations?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer complimentary 30-minute phone or video consultations for new clients. For in-person consultations at your property, we charge a $75 fee that is fully credited toward any services you book with us. This fee helps ensure our designers and consultants can dedicate proper time and attention to each potential client.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What's the best way to reach Ecolore for urgent gardening issues?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For urgent matters such as storm damage, hazardous tree situations, or irrigation emergencies, please call our 24/7 emergency line at (555) 123-4568. For non-urgent but time-sensitive issues during business hours, calling our main line at (555) 123-4567 will typically get you the fastest response. Email and contact form submissions are best for general inquiries and non-urgent matters.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I visit your office to discuss my gardening project?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While we primarily conduct consultations at client properties where we can assess the actual space, you're welcome to visit our Brooklyn office by appointment. Please call ahead to schedule an office visit as our design team is often out in the field. Our office address is Metrotech Center, Brooklyn, NY 11201, and we're available Monday-Friday 9am-6pm by appointment.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you provide gardening services for commercial properties?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer comprehensive gardening and landscaping services for commercial properties including office buildings, retail centers, restaurants, and multi-family residential complexes. Our commercial services include regular maintenance contracts, seasonal displays, rooftop gardens, and complete landscape installations. We have specialized teams and equipment to handle larger-scale projects with minimal disruption to your business operations.</p>
+                        <p>For commercial inquiries, please contact our business development manager directly at <a href="mailto:commercial@ecolore.com">commercial@ecolore.com</a> or call (555) 123-4569.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I get a quote for gardening services?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide free, no-obligation quotes for all our services. The most accurate way to get a quote is to schedule an on-site consultation where we can assess your space and discuss your specific needs. For general estimates:</p>
+                        <ul>
+                            <li>Basic garden maintenance starts at $75 per visit</li>
+                            <li>Custom garden design begins at $500 for small spaces</li>
+                            <li>Landscape installations vary widely based on materials and scope</li>
+                            <li>Irrigation system installation typically ranges from $1,500-$5,000</li>
+                        </ul>
+                        <p>Complete our <a href="#contact-form">contact form</a> with details about your project, and we'll provide a more accurate estimate based on your specific requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="contact-map">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Location</h2>
+                <p>Visit our Brooklyn office or get directions to your property for our on-site consultations.</p>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-73.98785368459584!3d40.70248887933285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a33e27d5035%3A0x155d5b662b4ec4b8!2sMetrotech%20Center%2C%20Brooklyn%2C%20NY%2011201%2C%20USA!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://goo.gl/maps/ABC123" class="btn" target="_blank">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <!-- CTA Section -->
+    <section class="contact-cta">
+        <div class="container">
+            <h2>Ready to Start Your Gardening Project?</h2>
+            <p>Contact us today to schedule your consultation and take the first step toward your dream garden.</p>
+            <a href="#contact-form" class="btn btn-light">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Ecolore</h3>
+                    <p>Grow Green. Live Vibrant.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Garden Design</a></li>
+                        <li><a href="#">Landscape Installation</a></li>
+                        <li><a href="#">Garden Maintenance</a></li>
+                        <li><a href="#">Organic Lawn Care</a></li>
+                        <li><a href="#">Irrigation Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Gardening Blog</a></li>
+                        <li><a href="#">Plant Care Guides</a></li>
+                        <li><a href="#">Seasonal Tips</a></li>
+                        <li><a href="#">DIY Projects</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="press.html">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Metrotech Center, Brooklyn, NY 11201, USA</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@ecolore.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9am-6pm</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Ecolore. All Rights Reserved. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="cookies.html">Cookie Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                item.classList.toggle('active');
+                
+                // Close other open items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
